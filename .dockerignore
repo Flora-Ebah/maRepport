@@ -1,0 +1,11 @@
+**/node_modules
+**/.next
+**/__pycache__
+backend/ma2e.db
+output
+_extract
+docs
+.git
+*.xlsx
+*.pdf
+*.csv

@@ -1,0 +1,36 @@
+# ─── Dépendances / build ───────────────────────────────
+**/node_modules/
+frontend/.next/
+frontend/dist/
+frontend/out/
+
+# ─── Python ────────────────────────────────────────────
+**/__pycache__/
+*.pyc
+backend/ma2e.db
+backend/*.db
+*.sqlite
+
+# ─── Données réelles & artefacts (NE JAMAIS publier) ────
+output/
+_extract/
+*.xlsx
+*.pdf
+*.csv
+frontend/public/copil.html
+
+# ─── Livrables avec chiffres réels (confidentiels) ──────
+docs/
+
+# ─── Env & secrets ─────────────────────────────────────
+.env
+.env.local
+.env.production
+*.env
+
+# ─── Système / IDE ─────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "titre": "—",
+    "exercice": 2000,
+    "source": "—"
+  },
+  "kpi": {
+    "total_preleve": 0,
+    "total_reverse": 0,
+    "ecart_total": 0,
+    "nb_mois_attente": 0,
+    "taux_reversement": 0
+  },
+  "lignes": [
+    {
+      "periode": "—",
+      "iso": "",
+      "epargne": 0,
+      "pret": 0,
+      "droit_adhesion": 0,
+      "parts_sociales": 0,
+      "total_fichier": 0,
+      "montant_vir": 0,
+      "ecart": 0,
+      "regle": true,
+      "observation": "—"
+    }
+  ]
+}

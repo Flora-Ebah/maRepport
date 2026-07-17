@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "source": "—"
+  },
+  "kpi": {
+    "nb_soldes": 0,
+    "nb_jours": 0,
+    "nb_anomalies": 0,
+    "nb_controles_ok": 0,
+    "nb_controles": 0
+  },
+  "controles": [
+    {
+      "code": "—",
+      "libelle": "—",
+      "detail": "—",
+      "statut": "OK"
+    }
+  ],
+  "anomalies": [
+    {
+      "onglet": "—",
+      "date": "2000-01-01",
+      "type": "—"
+    }
+  ]
+}

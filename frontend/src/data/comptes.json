@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "date_position": "2000-01-01",
+    "total": 0,
+    "nb_comptes": 0
+  },
+  "comptes": [
+    {
+      "code": "EXEMPLE",
+      "libelle": "Exemple",
+      "type": "BANQUE",
+      "solde_actuel": 0,
+      "part": 0,
+      "min": 0,
+      "max": 0,
+      "moyenne": 0,
+      "premier_jour": "2000-01-01",
+      "dernier_jour": "2000-01-01",
+      "nb_jours": 0,
+      "serie": [
+        0
+      ]
+    }
+  ]
+}

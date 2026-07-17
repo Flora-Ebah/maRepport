@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Police Sen (auto-hébergée) ─────────────────────────── */
+@font-face { font-family: "Sen"; font-weight: 400; font-display: swap; src: url("/fonts/sen/sen-400.woff2") format("woff2"); }
+@font-face { font-family: "Sen"; font-weight: 500; font-display: swap; src: url("/fonts/sen/sen-500.woff2") format("woff2"); }
+@font-face { font-family: "Sen"; font-weight: 700; font-display: swap; src: url("/fonts/sen/sen-700.woff2") format("woff2"); }
+@font-face { font-family: "Sen"; font-weight: 800; font-display: swap; src: url("/fonts/sen/sen-800.woff2") format("woff2"); }
+
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html, body { height: 100%; font-family: "Sen", system-ui, "Segoe UI", Roboto, Arial, sans-serif; }
+
+body {
+  @apply bg-background text-foreground font-sans;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 { @apply font-display tracking-tight; }
+h1 { @apply text-3xl font-bold; }
+h2 { @apply text-xl font-semibold; }
+h3 { @apply text-lg font-semibold; }
+
+/* Focus carré (accessibilité) */
+:focus-visible { outline: 2px solid #1F4E79; outline-offset: 2px; border-radius: 0; }
+
+@layer components {
+  /* Carte : fond blanc, AUCUNE bordure (séparée du fond gris par contraste) */
+  .card { @apply bg-white p-5; border-radius: 0; }
+  .card-pad-lg { @apply bg-white p-6; border-radius: 0; }
+
+  /* Titre de section */
+  .section-title {
+    @apply flex items-center gap-2 mb-3 text-xs uppercase tracking-wider text-neutral-500 font-semibold;
+  }
+
+  /* Badge : fond + texte, AUCUNE bordure */
+  .badge { @apply inline-flex items-center px-2 py-0.5 text-xs font-semibold uppercase tracking-wide; border-radius: 0; }
+  .badge-success { @apply bg-success-light text-success-dark; }
+  .badge-warning { @apply bg-warning-light text-warning-dark; }
+  .badge-danger { @apply bg-danger-light text-danger-dark; }
+  .badge-info { @apply bg-info-light text-info-dark; }
+  .badge-neutral { @apply bg-neutral-100 text-neutral-700; }
+
+  /* Tableau dense : AUCUNE bordure — séparation par zébrage + survol */
+  .data-table { @apply w-full text-sm border-collapse bg-white; }
+  .data-table thead th {
+    @apply px-4 py-2.5 text-left text-xs font-semibold uppercase tracking-wide text-neutral-600 bg-neutral-100;
+  }
+  .data-table tbody tr { @apply bg-white transition-colors hover:bg-primary-50; }
+  .data-table tbody tr:nth-child(even) { @apply bg-neutral-50; }
+  .data-table tbody tr:hover { @apply bg-primary-50; }
+  .data-table td { @apply px-4 py-2.5 text-neutral-800; }
+  .num { @apply text-right tabular-nums; font-variant-numeric: tabular-nums; }
+}
+
+/* Scrollbar discrète et carrée */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { @apply bg-neutral-100; }
+::-webkit-scrollbar-thumb { @apply bg-neutral-300; }
+::-webkit-scrollbar-thumb:hover { @apply bg-neutral-400; }

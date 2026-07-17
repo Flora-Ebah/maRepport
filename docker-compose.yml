@@ -1,0 +1,33 @@
+# MA2E — Pilote Trésorerie · déploiement frontend + backend ensemble
+#
+#   docker compose up --build
+#
+# En production, définir l'URL publique du backend avant le build :
+#   NEXT_PUBLIC_API_URL=http://ADRESSE_SERVEUR:8000 docker compose up --build
+#
+# Base : SQLite par défaut (aucun service de base à gérer). PostgreSQL reste
+# possible (voir README) via les variables MA2E_DB / PG*.
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: ma2e-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MA2E_DB=sqlite
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    container_name: ma2e-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped

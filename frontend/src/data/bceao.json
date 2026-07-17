@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "titre": "Reporting réglementaire BCEAO (SICSSFD)",
+    "source_catalogue": "SICSSFD_MENSUEL_31-01-2025_M_SFD_1_XLS.xlsx",
+    "periode": "2026-05"
+  },
+  "balance": {
+    "source": null,
+    "format": null,
+    "core_banking": "Perfect-Vision v5.7.1.5",
+    "date_arrete": null,
+    "etat_connexion": "En attente d'import",
+    "total_bilan": null,
+    "resultat_net": null,
+    "detail_disponible": false,
+    "note": "Importez la balance pour afficher les agrégats."
+  },
+  "workflow": [
+    {
+      "niveau": 1,
+      "role": "Préparateur (Contrôle Interne)",
+      "sla": "24h",
+      "desc": "Génération automatique des états + revue manuelle"
+    },
+    {
+      "niveau": 2,
+      "role": "Contrôleur senior",
+      "sla": "48h",
+      "desc": "Contrôle qualité & conformité — rejet possible avec motif"
+    },
+    {
+      "niveau": 3,
+      "role": "DAGF (Validateur)",
+      "sla": "48h",
+      "desc": "Validation finale + signature électronique XAdES"
+    },
+    {
+      "niveau": 4,
+      "role": "Système",
+      "sla": "—",
+      "desc": "Envoi BCEAO + archivage WORM 7 ans + accusé de réception"
+    }
+  ],
+  "etats": [
+    {
+      "code": "1",
+      "libelle": "BILAN_HBILAN",
+      "periodicite": "Mensuelle"
+    },
+    {
+      "code": "2",
+      "libelle": "CHARGES_PRODUITS",
+      "periodicite": "Mensuelle"
+    },
+    {
+      "code": "3",
+      "libelle": "Emplois et les Ressources",
+      "periodicite": "Mensuelle"
+    },
+    {
+      "code": "4",
+      "libelle": "Dispositif prudentiel",
+      "periodicite": "Variable"
+    },
+    {
+      "code": "5",
+      "libelle": "Indicateurs financiers d'activité",
+      "periodicite": "Variable"
+    },
+    {
+      "code": "6",
+      "libelle": "Indicateurs non financiers",
+      "periodicite": "Variable"
+    },
+    {
+      "code": "7",
+      "libelle": "Indicateurs de l'instruction n°18",
+      "periodicite": "Annuelle"
+    },
+    {
+      "code": "8",
+      "libelle": "Note au Conseil",
+      "periodicite": "Trimestrielle"
+    }
+  ],
+  "indicateurs": [
+    {
+      "groupe": "Qualité du portefeuille",
+      "items": [
+        {
+          "libelle": "Portefeuille à risque — PAR30",
+          "norme": "≤ 5 %"
+        },
+        {
+          "libelle": "Portefeuille à risque — PAR90",
+          "norme": "≤ 3 %"
+        },
+        {
+          "libelle": "Portefeuille à risque — PAR180",
+          "norme": "≤ 2 %"
+        },
+        {
+          "libelle": "Taux de provisions / créances en souffrance",
+          "norme": "≥ 40 %"
+        },
+        {
+          "libelle": "Taux de perte sur créances",
+          "norme": "≤ 2 %"
+        }
+      ]
+    },
+    {
+      "groupe": "Efficacité & productivité",
+      "items": [
+        {
+          "libelle": "Productivité des agents de crédit",
+          "norme": "≥ 130"
+        },
+        {
+          "libelle": "Productivité du personnel",
+          "norme": "≥ 115"
+        },
+        {
+          "libelle": "Charges d'exploitation / portefeuille",
+          "norme": "≤ 35 %"
+        },
+        {
+          "libelle": "Frais généraux / portefeuille (épargne-crédit)",
+          "norme": "≤ 20 %"
+        },
+        {
+          "libelle": "Charges de personnel (épargne-crédit)",
+          "norme": "≤ 10 %"
+        }
+      ]
+    },
+    {
+      "groupe": "Rentabilité",
+      "items": [
+        {
+          "libelle": "Rentabilité des fonds propres (ROE)",
+          "norme": "≥ 15 %"
+        },
+        {
+          "libelle": "Rendement sur actif (ROA)",
+          "norme": "≥ 3 %"
+        },
+        {
+          "libelle": "Autosuffisance opérationnelle",
+          "norme": "≥ 130 %"
+        }
+      ]
+    },
+    {
+      "groupe": "Dispositif prudentiel",
+      "items": [
+        {
+          "libelle": "Limitation des risques (une institution)",
+          "norme": "≤ 200 %"
+        },
+        {
+          "libelle": "Couverture emplois MLT par ressources stables",
+          "norme": "≥ 100 %"
+        },
+        {
+          "libelle": "Norme de liquidité",
+          "norme": "≥ 100 %"
+        },
+        {
+          "libelle": "Norme de capitalisation",
+          "norme": "≥ 15 %"
+        }
+      ]
+    }
+  ]
+}
