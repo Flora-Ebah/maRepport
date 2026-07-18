@@ -1,0 +1,11 @@
+# Backend service — build context is the project root so the Dockerfile
+# can copy ingestion/ and frontend/src/data/bceao.json alongside backend/.
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "backend/Dockerfile"
+
+[deploy]
+healthcheckPath = "/api/health"
+healthcheckTimeout = 30
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
