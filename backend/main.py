@@ -109,6 +109,17 @@ def login(c: Login):
     return {"email": u["email"], "nom": u["nom"], "role": u["role"]}
 
 
+@app.get("/")
+def root():
+    return {
+        "service": "MA2E — API Trésorerie",
+        "status": "ok",
+        "message": "Ceci est l'API (backend). L'interface est servie par le frontend.",
+        "documentation": "/docs",
+        "sante": "/api/health",
+    }
+
+
 @app.get("/api/health")
 def health():
     n = query_one("SELECT COUNT(*) AS n FROM fait_solde_journalier")["n"]
